@@ -1,0 +1,365 @@
+/* =========================================
+   LPG GASFIRE — Animations
+   ========================================= */
+
+/* =========================================
+   KEYFRAMES
+   ========================================= */
+
+@keyframes orbFloat1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(-30px, 20px) scale(1.05); }
+  66%       { transform: translate(20px, -30px) scale(0.97); }
+}
+
+@keyframes orbFloat2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  40%       { transform: translate(25px, -20px) scale(1.08); }
+  70%       { transform: translate(-15px, 30px) scale(0.95); }
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.6; transform: scale(0.7); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50%       { opacity: 1; transform: scale(1.08); }
+}
+
+@keyframes cylinderFloat {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-16px); }
+}
+
+@keyframes badgeFloat1 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-8px) rotate(1deg); }
+}
+
+@keyframes badgeFloat2 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-10px) rotate(-1deg); }
+}
+
+@keyframes tickerScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes flameFlicker {
+  0%, 100% { transform: scaleX(1) scaleY(1); opacity: 1; }
+  25%       { transform: scaleX(0.94) scaleY(1.05); opacity: 0.9; }
+  50%       { transform: scaleX(1.04) scaleY(0.97); opacity: 0.95; }
+  75%       { transform: scaleX(0.97) scaleY(1.03); opacity: 1; }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes drawLine {
+  from { stroke-dashoffset: 1000; }
+  to   { stroke-dashoffset: 0; }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   SCROLL REVEAL — Entry Animation Classes
+   ========================================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-28px);
+  transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(28px);
+  transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger delays */
+.delay-1 { transition-delay: 0.1s !important; }
+.delay-2 { transition-delay: 0.2s !important; }
+.delay-3 { transition-delay: 0.3s !important; }
+.delay-4 { transition-delay: 0.4s !important; }
+.delay-5 { transition-delay: 0.5s !important; }
+.delay-6 { transition-delay: 0.6s !important; }
+
+/* =========================================
+   HERO ENTRANCE ANIMATIONS
+   ========================================= */
+
+.hero-eyebrow {
+  animation: fadeInUp 0.8s ease both;
+  animation-delay: 0.2s;
+}
+
+.hero-title {
+  animation: fadeInUp 0.9s ease both;
+  animation-delay: 0.35s;
+}
+
+.hero-desc {
+  animation: fadeInUp 0.9s ease both;
+  animation-delay: 0.5s;
+}
+
+.hero-actions {
+  animation: fadeInUp 0.9s ease both;
+  animation-delay: 0.62s;
+}
+
+.hero-stats {
+  animation: fadeInUp 0.9s ease both;
+  animation-delay: 0.75s;
+}
+
+.cylinder-wrapper {
+  animation: scaleIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 0.4s;
+}
+
+/* =========================================
+   FLAME ANIMATION on SVG elements
+   ========================================= */
+
+.flame-anim {
+  animation: flameFlicker 2.5s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+/* =========================================
+   SHIMMER LOADING / SKELETON EFFECT
+   ========================================= */
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--bg-card) 0%,
+    rgba(255,255,255,0.04) 40%,
+    var(--bg-card) 80%
+  );
+  background-size: 200% auto;
+  animation: shimmer 2s linear infinite;
+}
+
+/* =========================================
+   PROGRESS / GAUGE BARS
+   ========================================= */
+
+.progress-bar {
+  height: 3px;
+  background: var(--border-light);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-fire), var(--accent-amber));
+  border-radius: 2px;
+  width: 0;
+  transition: width 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
+}
+
+.progress-fill.animated {
+  width: var(--fill-width, 75%);
+}
+
+/* =========================================
+   BUTTON RIPPLE
+   ========================================= */
+
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.btn:active::after {
+  transform: scale(1.5);
+  opacity: 0;
+  transition: 0s;
+}
+
+/* =========================================
+   PULSE RING around CTA button
+   ========================================= */
+
+.btn-primary {
+  position: relative;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(232, 99, 42, 0.4);
+  animation: pulseRing 2.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes pulseRing {
+  0%, 100% { opacity: 0; transform: scale(0.95); }
+  50%       { opacity: 1; transform: scale(1.05); }
+}
+
+/* =========================================
+   HOVER TILT (JS helper class)
+   ========================================= */
+
+.tilt-card {
+  transition: transform 0.2s ease;
+  transform-style: preserve-3d;
+}
+
+/* =========================================
+   NUMBER COUNTER ANIMATION
+   ========================================= */
+
+.counter-num {
+  display: inline-block;
+  animation: countUp 1s ease both;
+}
+
+/* =========================================
+   MOBILE NAV TOGGLE
+   ========================================= */
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: none;
+  padding: 8px;
+}
+
+.nav-toggle span {
+  width: 24px;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 1px;
+  transition: var(--transition);
+  display: block;
+}
+
+.nav-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .nav-toggle { display: flex; }
+}
